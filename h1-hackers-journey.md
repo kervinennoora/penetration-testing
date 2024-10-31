@@ -55,10 +55,28 @@ Tämän jälkeen uudelleen käynnistän virtuaalikoneen ja testaan verkkoyhteyde
 
 ![image](https://github.com/user-attachments/assets/57206db8-2446-432b-a7ef-fecc9d5d0726)
 
-Tehtävä onnistui ja virtuaalikone ei ole nyt yhteydessä verkkoon. 
+Tehtävä onnistui ja virtuaalikone ei ole nyt yhteydessä verkkoon. Testataan sama vielä ping-komennolla.
+
+![image](https://github.com/user-attachments/assets/0e8b303e-6947-4704-9f20-bd705fda8482)
+
 ## c) Porttiskannaa 1000 tavallisinta tcp-porttia omasta koneestasi
+Skannataan 1000 tavallisinta tcp-porttia komennolla ``nmap -A localhost``
+
+![image](https://github.com/user-attachments/assets/5103dc51-65b1-4221-a7d7-967300f1b614)
+
+Portteja löytyi nolla (0) kappaletta. Virtuaalikone ei ole yhteydessä verkkoon eli ei ole portteja, joita skannata.
+
 ## d) Asenna kaksi vapaavalintaista demonia ja skannaa uudelleen
+
+Aloitetaan päivittämällä paketit, ennen demonien asennusta. Tähän käytän komentoa ``sudo apt-get update`` ja ``sudo apt-get upgrade``.
+Tämän jälkeen lataan ufw:n käyttämällä komentoa ``sudo apt install ufw``. Samalla asensin Apache2 ja SSH:n. 
+
+![image](https://github.com/user-attachments/assets/11c65862-220c-4ad6-80bd-b18abee29ddc)
+
+Skannasin portit ja asennusten jälkeen löytyi kaksi porttia! Portit auki HTTP ja SSH liikenteelle. 
+
 ## e) Asenna Metasploitable 2 virtuaalikoneeseen
+Asennan Metasploitable 2 koneen Valkamon ohjeita noudattaen. 
 ## f) Tee koneiden välille virtuaaliverkko
 ## g) Etsi Metasploitable porttiskannaamalla
 ## h) Porttiskannaa Metasploitable huolellisesti ja kaikki portit
@@ -78,4 +96,4 @@ Kali Linux. Prebuilt Virtual Machines. Kali.org. Saatavilla: https://www.kali.or
 
 Geeks for Geeks. 2024. How to Install Kali Linux in VirtualBox: Using Pre-built VM? Saatavilla: https://www.geeksforgeeks.org/install-kali-linux-in-virtualbox/
 
-Valkamo. 2022. Hacking into a Target Using Metasploit. Saatavilla: https://tuomasvalkamo.com/PenTestCourse/week-2/
+Valkamo, T. 2022. Hacking into a Target Using Metasploit. Saatavilla: https://tuomasvalkamo.com/PenTestCourse/week-2/
