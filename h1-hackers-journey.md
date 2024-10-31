@@ -23,7 +23,18 @@
   - Tavoitteet
  
 **Santos et al: The Art of Hacking:**
-- 
+- Aktiivinen tiedustelu tarkoittaa tiedustelutoimenpiteitä, joissa hyökkäyskohteelle lähetetään tietoa, kuten porttien skannausta ja haavoittuvuuksien etsimistä.
+- Usein nämä vaiheet ovat lainvastaisia jo itsessään.
+- Yleisiä aktiivisen tiedustelun työkaluja porttien skannaukseen ovat esimerkiksi Nmap, Masscan ja Udpprotoscanner.
+- Verkkosovellusten tutkimiseen EyeWitness on yleisin.
+- Haavoittuvuuksien etsimiseen yleisimpiä ovat Nessus, Nexpose, Nikto ja Zed.
+
+**KKO 2003:36:**
+- Vuonna 1998 A yritti tunkeutua OP-ryhmän tietojärjestelmään Helsingissä käyttämällä porttiskanneria, jolla hän etsi avoimia välityspalvelimia.
+- OP-ryhmä vaati A:lta vahingonkorvausta rikoksen selvityskustannuksista. Käräjäoikeus katsoi, ettei A ollut osoittanut selvää murtautumisaikomusta, joten se hylkäsi syytteen tietomurrosta, mutta tuomitsi hänet sakkoihin tietoliikenteen häirinnästä.
+- Hovioikeus totesi myöhemmin, että A:n tarkoituksena oli tunkeutua järjestelmään, mikä teki teosta tietomurron yrityksen.
+- Hovioikeus tuomitsi hänet korvauksiin osuuskunnalle ja sen alaiselle yhtiölle. Korkein oikeus vahvisti hovioikeuden päätöksen ja tuomitsi A:n
+maksamaan täyden korvauksen tietoturvallisuusrikkomusten ennalta-arvattavista vahingoista.
 ## a) Asenna Kali virtuaalikoneeseen
 ## b) Irrota Kali-virtuaalikone verkosta
 ## c) Porttiskannaa 1000 tavallisinta tcp-porttia omasta koneestasi
