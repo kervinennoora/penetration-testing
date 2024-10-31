@@ -2,7 +2,7 @@
 
 ## x) Lue/katso/kuuntele ja tiivistä
 **Herrasmieshakkerit:**
-- Kuuntelin jakson Tietoturvan Niksipirkka, vieraana Juho Rikala | 0x34.
+- Kuuntelin Podmesta jakson Tietoturvan Niksipirkka, vieraana Juho Rikala | 0x34.
 - Jaksossa mainittiin CrowdStriken toimintahäiriö ja se kuinka siitä ei puhuttu BlackHatissa.
 - Keskuteltiin siitä onko rikollinen tausta este vai meriitti it-alalla? Juontajat pääsivät siihen tulokseen, ettei varsinaisesti estettä ole, mutta luottamusta voi olla vaikea saada.
 - Keskolla on pääkaupunkiseudulla sen ainut tietoturvatiimi. Tiimi kuitenkin toimii paljolti yhteistyössä muiden IT tiimien kanssa.
@@ -49,4 +49,8 @@ Karvinen, T. 2024. Tunkeutumistestaus - Penetration Testing course - 2024 late a
 
 Karvinen, T. 2024. h1 - Hacker's Journey. Saatavilla: https://terokarvinen.com/tunkeutumistestaus/#h1-hackers-journey
 
+Hutchins, E. s.a. Intelligence-Driven Computer Network Defense Informed by Analysis of Adversary Campaigns and Intrusion Kill Chains. Saatavilla:https://lockheedmartin.com/content/dam/lockheed-martin/rms/documents/cyber/LM-White-Paper-Intel-Driven-Defense.pdf
 
+Santol, O. 2019. The Art of Hacking (Video Collection). Saatavilla: https://learning.oreilly.com/videos/the-art-of/9780135767849/9780135767849-SPTT_04_00/
+
+KKO:2003:36. Saatavilla:https://finlex.fi/fi/oikeus/kko/kko/2003/20030036
