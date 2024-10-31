@@ -36,7 +36,26 @@
 - Hovioikeus tuomitsi hänet korvauksiin osuuskunnalle ja sen alaiselle yhtiölle. Korkein oikeus vahvisti hovioikeuden päätöksen ja tuomitsi A:n
 maksamaan täyden korvauksen tietoturvallisuusrikkomusten ennalta-arvattavista vahingoista.
 ## a) Asenna Kali virtuaalikoneeseen
+Aloitan tehtävän lataamalla valmiiksi rakennetun virtuaalikoneen Kali.org sivustolta. Onnistuneen latauksen jälkeen seuraan GeeksforGeeks:n tekemiä ohjeita Kalin asentamiseen.
+
+![image](https://github.com/user-attachments/assets/14d38650-15ef-441d-9826-7ee0e454fb5f)
+
+Kuva toimivasta virtuaalikoneesta.
+
+![image](https://github.com/user-attachments/assets/eefedff7-b803-48f9-ae7d-01342314369f)
+
+Tässä kohtaa virtuaalikone on yhteydessä verkkoon.
+
 ## b) Irrota Kali-virtuaalikone verkosta
+On aika irroittaa virtuaalikone verkosta. Se onnistuu menemällä koneen asetuksiin > network > advanced > ja ruksi pois kohdasta "Cable Connected".
+
+![image](https://github.com/user-attachments/assets/fd559c3b-cc74-4b7e-97cd-65ffc4cf9660)
+
+Tämän jälkeen uudelleen käynnistän virtuaalikoneen ja testaan verkkoyhteyden.
+
+![image](https://github.com/user-attachments/assets/57206db8-2446-432b-a7ef-fecc9d5d0726)
+
+Tehtävä onnistui ja virtuaalikone ei ole nyt yhteydessä verkkoon. 
 ## c) Porttiskannaa 1000 tavallisinta tcp-porttia omasta koneestasi
 ## d) Asenna kaksi vapaavalintaista demonia ja skannaa uudelleen
 ## e) Asenna Metasploitable 2 virtuaalikoneeseen
@@ -49,8 +68,14 @@ Karvinen, T. 2024. Tunkeutumistestaus - Penetration Testing course - 2024 late a
 
 Karvinen, T. 2024. h1 - Hacker's Journey. Saatavilla: https://terokarvinen.com/tunkeutumistestaus/#h1-hackers-journey
 
-Hutchins, E. s.a. Intelligence-Driven Computer Network Defense Informed by Analysis of Adversary Campaigns and Intrusion Kill Chains. Saatavilla:https://lockheedmartin.com/content/dam/lockheed-martin/rms/documents/cyber/LM-White-Paper-Intel-Driven-Defense.pdf
+Hutchins, E. s.a. Intelligence-Driven Computer Network Defense Informed by Analysis of Adversary Campaigns and Intrusion Kill Chains. Saatavilla: https://lockheedmartin.com/content/dam/lockheed-martin/rms/documents/cyber/LM-White-Paper-Intel-Driven-Defense.pdf
 
 Santol, O. 2019. The Art of Hacking (Video Collection). Saatavilla: https://learning.oreilly.com/videos/the-art-of/9780135767849/9780135767849-SPTT_04_00/
 
-KKO:2003:36. Saatavilla:https://finlex.fi/fi/oikeus/kko/kko/2003/20030036
+KKO:2003:36. Saatavilla: https://finlex.fi/fi/oikeus/kko/kko/2003/20030036
+
+Kali Linux. Prebuilt Virtual Machines. Kali.org. Saatavilla: https://www.kali.org/get-kali/#kali-virtual-machines
+
+Geeks for Geeks. 2024. How to Install Kali Linux in VirtualBox: Using Pre-built VM? Saatavilla: https://www.geeksforgeeks.org/install-kali-linux-in-virtualbox/
+
+Valkamo. 2022. Hacking into a Target Using Metasploit. Saatavilla: https://tuomasvalkamo.com/PenTestCourse/week-2/
