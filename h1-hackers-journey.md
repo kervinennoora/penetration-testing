@@ -76,10 +76,33 @@ Tämän jälkeen lataan ufw:n käyttämällä komentoa ``sudo apt install ufw``.
 Skannasin portit ja asennusten jälkeen löytyi kaksi porttia! Portit auki HTTP ja SSH liikenteelle. 
 
 ## e) Asenna Metasploitable 2 virtuaalikoneeseen
-Asennan Metasploitable 2 koneen Valkamon ohjeita noudattaen. 
+Asennan Metasploitable 2 koneen Valkamon ohjeita noudattaen. Kaikki ei sujunut niinkuin ohjeessa. Täytyi luoda uusi virtuaalikone ja laittaa sille kovalevy, joka ladattiin Metasploitable paketin mukana. 
+
+![image](https://github.com/user-attachments/assets/35038c64-96cc-45ff-a96e-5d0366b1173d)
+
+Jännitys tiivistyy, onnistuiko asennus?
+
+![image](https://github.com/user-attachments/assets/7542fc9b-9144-4701-b4c4-d6474bd59c29)
+
+Tadaa, aikaiseksi saatiin toimiva Metasploitable kone! Nopealla googlauksella sain selville koneen default creditit ja pääsin kirjautumaan koneelle. 
+
 ## f) Tee koneiden välille virtuaaliverkko
+Seuraan edelleen Valkamon ohjeita ja vaihdoin Metasploitable koneen verkkokytkimen Host-only kytkimeksi. Tämän jälkeen loin Kali koneelle uuden virtuaalikytkimen ja Adapter 2 sai myös arvoksi Host-only. Tämä tarkoittaa sitä, että Metasploitable kone saa ainoastaan yhteyttä Kali koneeseen. Kali kone saa yhteyttä taas Metasploitable koneeseen ja internettiin. Tällä hetkellä se ei ole yhteydessä internettiin.
+
+Avataan koneet ja testataan yhteydet internettiin, jos ne ei saa yhteyttä. Siirryn eteenpäin. 
+
+![image](https://github.com/user-attachments/assets/b508ebab-04df-4e74-851c-83861ae0844a)
+
+![image](https://github.com/user-attachments/assets/7a79ecde-dd26-4cc7-8893-3ca5a716fcb5)
+
+Testataan nyt yhteys koneiden välillä. Tässä kohtaa törmäsin seinään ja en saa selville Metasploitable koneen IP-osoitetta. Käytin komentoja ``ifconfig`` ja ``ip addr``. Mutta tietoa ei löydy, sieltä mistä pitäisi.
+
+![image](https://github.com/user-attachments/assets/f0731f86-aa4c-4da5-8583-5956161ceb7c)
+
 ## g) Etsi Metasploitable porttiskannaamalla
+Tämän saan toivottavasti tehtyä myöhemmin, ongelmien ratkaisun jälkeen.
 ## h) Porttiskannaa Metasploitable huolellisesti ja kaikki portit
+Tämän saan toivottavasti tehtyä myöhemmin, ongelmien ratkaisun jälkeen.
 # Lähteet
 
 Karvinen, T. 2024. Tunkeutumistestaus - Penetration Testing course - 2024 late autumn. Saatavilla: https://terokarvinen.com/tunkeutumistestaus/
@@ -97,3 +120,5 @@ Kali Linux. Prebuilt Virtual Machines. Kali.org. Saatavilla: https://www.kali.or
 Geeks for Geeks. 2024. How to Install Kali Linux in VirtualBox: Using Pre-built VM? Saatavilla: https://www.geeksforgeeks.org/install-kali-linux-in-virtualbox/
 
 Valkamo, T. 2022. Hacking into a Target Using Metasploit. Saatavilla: https://tuomasvalkamo.com/PenTestCourse/week-2/
+
+Rapid 7. s.a. Metasploit Documentation. Saatavilla:  https://docs.rapid7.com/metasploit/metasploitable-2
