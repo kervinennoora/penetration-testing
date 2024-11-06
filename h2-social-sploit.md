@@ -130,7 +130,7 @@ Ei näytä toimivan yhtään. En valitettavasti tiedä itse miten ongelmaa läht
 
 ## k) Demonstroi Meterpretrin ominaisuuksia
 
-Käytin demostrointiin Meterpretrin tärkeimpiä ja yleisimpiä komentoja.
+Käytin demostrointiin Meterpretrin tärkeimpiä ja yleisimpiä komentoja ``arp`` ja ``route``.
 
 ![image](https://github.com/user-attachments/assets/b35b073b-1f62-4697-a73f-6b9a44d590a9)
 ## l) Tallenna shell-sessio tekstitiedostoon script-työkalulla
