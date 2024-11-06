@@ -48,6 +48,31 @@ Käytetään porttiskannaukseen komentoa ``db_nmap -sn 192.168.88.4``.
 ![image](https://github.com/user-attachments/assets/1ad1dc93-be7d-43e6-a5e3-2e3c9bb7fb43)
 
 Jee! Maalikone löytyi!
+## d)  Porttiskannaa Metasploitable perusteellisesti
+Aloitan kohdan D tekemällä tehtävälle oman workspacen komennolla ``workspace -a h2``.
+
+![image](https://github.com/user-attachments/assets/7266e021-10ae-405b-835e-62a282438ac3)
+
+Onnistuneen luomisen jälkeen porttiskannataan Metasploitable ja tallennetaan tulokset kansioon *tehtava*.
+
+Tähän käytetään komentoa ``nmap -oA tehtava 192.168.88.4``.
+
+![image](https://github.com/user-attachments/assets/1be6925b-4dbd-48b5-a722-66de6a7835e2)
+
+![image](https://github.com/user-attachments/assets/af36fa51-9019-46e8-97d5-71bf3d4c423b)
+
+Tarkistetaan vielä onnistuiko tallennus kansioon *tehtava*.
+
+![image](https://github.com/user-attachments/assets/44c6f775-fc20-4c7e-9305-7ad87268baa6)
+
+## e) Tarkastele Metasploitin tietokantoihin tallennettuja tietoja
+Käytetään tähän komentoja ``hosts`` ja ``services``. 
+
+![image](https://github.com/user-attachments/assets/9e61cc3a-dd69-41af-b27c-efa58c676ecf)
+
+![image](https://github.com/user-attachments/assets/d6d41d3a-896b-42cd-b680-4f264887a454)
+
+## f) Vertaile nmap:n omaa tiedostoon tallennusta ja db_nmap:n tallennusta tietokantoihin
 # Lähteet
 https://terokarvinen.com/tunkeutumistestaus/
 
