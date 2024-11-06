@@ -80,9 +80,71 @@ Ensimmäinen tiedostomuoto *.gnmap* on Nmapin perinteinen tekstitiedostomuoto, j
 Tiedostomuoto *.nmap* on  tekstitiedostomuoto, joka tuottaa perusraportin skannauksesta. Se sisältää yksityiskohtaisen listauksen skannatuista isäntäkoneista, avoimista porteista ja niiden palveluista, mutta ei ole yhtä jäsennelty kuin XML-muoto. Tämäkin tiedostomuoto voi olla hyödyllinen tavalliselle tarkastelulle, mutta Metasploit saattaa käsitellä sitä vähemmän tehokkaasti kuin XML-muotoista dataa. 
 
 Kolmas tiedostomuoto *.xml* on Nmapin XML-muotoinen skannausraportti. XML-muoto on erittäin jäsennelty ja koneellisesti luettava, ja se sisältää kaikki tiedot, joita Nmap voi kerätä. Tämä sisältää isäntäkoneet, avoimet portit, palvelut, versiotiedot, ja jopa muita yksityiskohtia, kuten skriptien tulokset. XML-muotoa käytetään usein tiedon tuomiseen ohjelmointirajapintojen kautta, kuten Metasploitin ``db_import`` komennolla, koska se sisältää koko tiedon ja on helppo käsitellä.
+
+## g) Murtaudu Metasploitablen vsftpd-palveluun
+Aloitetaan murtautuminen etsimällä hyökkäys ``search vsftpd 2.3.4`` komennolla.
+
+![image](https://github.com/user-attachments/assets/3e4c6d07-9452-47f4-8df2-57575496c696)
+
+On aika asettaa maalikone. Se tapahtuu komennolla ``setg RHOSTS 192.168.88.4``. Tämän jälkeen ajetaan komennot ``use 0`` ja  ``run`` joka ajaa hyökkäyksen.
+
+![image](https://github.com/user-attachments/assets/a3e6f955-16a7-4673-8515-8f715e5e725f)
+
+![image](https://github.com/user-attachments/assets/7414a7da-1269-403a-9daa-ccda434586c7)
+
+Hyökkäys onnistui! Olemme maalikoneessa.
+
+## h) Päivitä äskeisen vsftpd-murron yhteydessä syntynyt sessio meterpretriin
+Asetetaan kyseinen istunto taustalle komennolla ``background``. 
+
+![image](https://github.com/user-attachments/assets/8bb92f3e-6ed5-4583-9157-865db068d60b)
+
+Luodaan uusi istunto komennolla ``sessions -u 1``. Liitytään istuntoon Meterpreterillä käyttäen komentoa ``sessions 2``. 
+
+![image](https://github.com/user-attachments/assets/cd482e4a-8797-4e0f-93d9-8cdceaabd76c)
+## i) Kerää levittäytymisessä (lateral movement) tarvittavaa tietoa metasploitablesta
+Etsin tässä tehtävässä käyttäjiä ja salasanoja järjestelmästä.
+
+Menin kansioon /etc/ ja käytän komentoa ``cat passwd``.
+
+![image](https://github.com/user-attachments/assets/8662f12c-5486-4ebc-8651-d21136b2728a)
+
+![image](https://github.com/user-attachments/assets/b9c70bc1-8076-4af0-954a-1d8fec658958)
+
+Tämän jälkeen käytän komentoa ``cat shadow``.  
+
+![image](https://github.com/user-attachments/assets/f372441a-b458-42f0-95cf-e83ffe2f9d9e)
+
+![image](https://github.com/user-attachments/assets/a15eb9c5-fc12-43ff-bd93-0a246cf1db06)
+
+Käyttäjien ja salasanojen hyödyntäminen murtautumisessa on aika keskeinen asia.
+
+## j) Murtaudu Metasploitableen jollain toisella tavalla
+En itse keksinyt muuta tapaa murtautua Metasploitableen, joten käytin apuna Valkamon ohjeita. Ohjeissa käsiteltiin UnrealIRCd. 
+
+![image](https://github.com/user-attachments/assets/aa8c9cb8-c6d2-436b-8b13-b7ff0cdbc35c)
+
+![image](https://github.com/user-attachments/assets/3e0b70bc-1856-4360-85cf-3e20075c5b4a)
+
+Ei näytä toimivan yhtään. En valitettavasti tiedä itse miten ongelmaa lähteä ratkaisemaan.
+
+## k) Demonstroi Meterpretrin ominaisuuksia
+
+Käytin demostrointiin Meterpretrin tärkeimpiä ja yleisimpiä komentoja.
+
+![image](https://github.com/user-attachments/assets/b35b073b-1f62-4697-a73f-6b9a44d590a9)
+## l) Tallenna shell-sessio tekstitiedostoon script-työkalulla
+Tallenetaan Shell-sessio tekstitiedostoon *log001.txt*. Tähän käytän komentoa ``script -fa log001.txt``.
+
+![image](https://github.com/user-attachments/assets/5e34ac2e-a06b-4552-9233-6c656406f13f)
+
 # Lähteet
 *https://terokarvinen.com/tunkeutumistestaus/
 
 https://terokarvinen.com/tunkeutumistestaus/#h2-social-sploit
 
 https://learning.oreilly.com/library/view/mastering-metasploit/9781838980078/B15076_01_Final_ASB_ePub.xhtml#_idParaDest-31
+
+https://nmap.org/book/zenmap-saving.html
+
+https://tuomasvalkamo.com/PenTestCourse/week-2/
