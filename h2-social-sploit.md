@@ -73,8 +73,15 @@ Käytetään tähän komentoja ``hosts`` ja ``services``.
 ![image](https://github.com/user-attachments/assets/d6d41d3a-896b-42cd-b680-4f264887a454)
 
 ## f) Vertaile nmap:n omaa tiedostoon tallennusta ja db_nmap:n tallennusta tietokantoihin
+Nmap on tallentanut tiedot kolmeen eri tiedostoon; ne ovat tehtava.gnmap, tehtava.nmap ja tehtava.xml.
+
+Ensimmäinen tiedostomuoto *.gnmap* on Nmapin perinteinen tekstitiedostomuoto, joka tuottaa perusraportin skannauksesta. Se sisältää yksityiskohtaisen listauksen skannatuista isäntäkoneista, avoimista porteista ja niiden palveluista, mutta ei ole yhtä jäsennelty kuin XML-muoto. Tämä tiedostomuoto voi olla hyödyllinen tavalliselle tarkastelulle, mutta Metasploit saattaa käsitellä sitä vähemmän tehokkaasti kuin XML-muotoista dataa. 
+
+Tiedostomuoto *.nmap* on  tekstitiedostomuoto, joka tuottaa perusraportin skannauksesta. Se sisältää yksityiskohtaisen listauksen skannatuista isäntäkoneista, avoimista porteista ja niiden palveluista, mutta ei ole yhtä jäsennelty kuin XML-muoto. Tämäkin tiedostomuoto voi olla hyödyllinen tavalliselle tarkastelulle, mutta Metasploit saattaa käsitellä sitä vähemmän tehokkaasti kuin XML-muotoista dataa. 
+
+Kolmas tiedostomuoto *.xml* on Nmapin XML-muotoinen skannausraportti. XML-muoto on erittäin jäsennelty ja koneellisesti luettava, ja se sisältää kaikki tiedot, joita Nmap voi kerätä. Tämä sisältää isäntäkoneet, avoimet portit, palvelut, versiotiedot, ja jopa muita yksityiskohtia, kuten skriptien tulokset. XML-muotoa käytetään usein tiedon tuomiseen ohjelmointirajapintojen kautta, kuten Metasploitin ``db_import`` komennolla, koska se sisältää koko tiedon ja on helppo käsitellä.
 # Lähteet
-https://terokarvinen.com/tunkeutumistestaus/
+*https://terokarvinen.com/tunkeutumistestaus/
 
 https://terokarvinen.com/tunkeutumistestaus/#h2-social-sploit
 
