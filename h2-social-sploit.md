@@ -139,12 +139,12 @@ Tallenetaan Shell-sessio tekstitiedostoon *log001.txt*. Tähän käytän komento
 ![image](https://github.com/user-attachments/assets/5e34ac2e-a06b-4552-9233-6c656406f13f)
 
 # Lähteet
-*https://terokarvinen.com/tunkeutumistestaus/
+Karvinen, T. 2024. Tunkeutumistestaus - Penetration Testing course - late autumn 2024. Saatavilla: https://terokarvinen.com/tunkeutumistestaus/
 
-https://terokarvinen.com/tunkeutumistestaus/#h2-social-sploit
+Karvinen, T. 2024. h2 - Social sploit. Saatavilla: https://terokarvinen.com/tunkeutumistestaus/#h2-social-sploit
 
-https://learning.oreilly.com/library/view/mastering-metasploit/9781838980078/B15076_01_Final_ASB_ePub.xhtml#_idParaDest-31
+Jaswal, N. 2020. Mastering Metasploit - Fourth Edition. O'Reilly. Saatavilla: https://learning.oreilly.com/library/view/mastering-metasploit/9781838980078/B15076_01_Final_ASB_ePub.xhtml#_idParaDest-31
 
-https://nmap.org/book/zenmap-saving.html
+Nmap.org. s.a. Saving and Loading Scan Results | Nmap Network Scanning. Saatavilla: https://nmap.org/book/zenmap-saving.html
 
-https://tuomasvalkamo.com/PenTestCourse/week-2/
+Valkamo, T. 2022. Hacking into a Target Using Metasploit | Tuomas Valkamo. Saatavilla: https://tuomasvalkamo.com/PenTestCourse/week-2/
