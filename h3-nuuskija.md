@@ -69,6 +69,10 @@ Tässä menikin sitten tovi, ja vastaus eroaa ohjeista.
 
 ## e) HTB
 
+Ekana ratkaisin kissan. Tässä tehtävässä ratkaistiin helppoja kysymyksiä. Lopussa täytyi löytää Root flag ja antaa sen vastaus. 
+
+![image](https://github.com/user-attachments/assets/a3920927-112d-44a4-a7a2-83a40f68d23f)
+
 
 # Lähteet
 Karvinen, T. 2024. Tunkeutumistestaus - Penetration Testing course - 2024 late autumn. Saatavilla: https://terokarvinen.com/tunkeutumistestaus/
