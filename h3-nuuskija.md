@@ -57,6 +57,19 @@ Ennenkuin irroitan koneen verkosta, latasin vielä ohjeessa mainitun hakemiston.
 
 ![image](https://github.com/user-attachments/assets/9e97d711-ae68-4787-b31e-a305a42ad16d)
 
+Nyt kun kaikki valmistelu on tehty pääsen ffufaamaan! Testataan ensin, ettei kone saa yhteyttä verkkoon.
+
+![image](https://github.com/user-attachments/assets/b3dd01e2-67e1-431d-ac49-105768202872)
+
+Ja nyt päästään suorittamaan.
+
+Tässä menikin sitten tovi, ja vastaus eroaa ohjeista. 
+
+![image](https://github.com/user-attachments/assets/bf3297ae-7702-427d-b08e-90be89915395)
+
+## e) HTB
+
+
 # Lähteet
 Karvinen, T. 2024. Tunkeutumistestaus - Penetration Testing course - 2024 late autumn. Saatavilla: https://terokarvinen.com/tunkeutumistestaus/
 
