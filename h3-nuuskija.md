@@ -33,6 +33,30 @@ Lisäksi viestiliikenne näyttää erillaiselta verrattuna siihen, mitä testasi
 ![image](https://github.com/user-attachments/assets/c5cc41d5-eddf-4ab6-92d3-981c3222b150)
 
 Rehellisesti sanottuna en oikein osaa tulkita kyseistä liikennettä. Sen tiedän, että MDNS on verkkoprotokolla, jota käytetään pienissä verkoissa. 
+Täytyy tiedustella Teroa asiasta ja jos asia vaatii sen, poistan Kali koneen ja asennan sen uudelleen. 
+
+## d)  Fuzzzz
+
+Ratkaistaan Karvisen 2023 artikkelin dirfuz-1.
+
+Aloitan syöttämällä ekat komennot Kalin terminaalissa.
+
+![image](https://github.com/user-attachments/assets/889c8d2d-0cf5-4d6a-8c2b-27da4adface5)
+
+Komentojen syötön jälkeen sain tämän vastaukseksi.
+
+![image](https://github.com/user-attachments/assets/eaafc4da-e9f9-43fe-9d90-5834de360469)
+
+Tämän jälkeen asennan ffufin Kaliin.
+
+![image](https://github.com/user-attachments/assets/125b35ac-ca10-473a-a04b-b05cf80dd149)
+
+![image](https://github.com/user-attachments/assets/de616167-5e52-404b-9638-aaec767a105c)
+
+Ennenkuin irroitan koneen verkosta, latasin vielä ohjeessa mainitun hakemiston.
+
+![image](https://github.com/user-attachments/assets/9e97d711-ae68-4787-b31e-a305a42ad16d)
+
 # Lähteet
 Karvinen, T. 2024. Tunkeutumistestaus - Penetration Testing course - 2024 late autumn. Saatavilla: https://terokarvinen.com/tunkeutumistestaus/
 
