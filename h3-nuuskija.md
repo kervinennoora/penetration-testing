@@ -69,10 +69,11 @@ Tässä menikin sitten tovi, ja vastaus eroaa ohjeista.
 
 ## e) HTB
 
-Ekana ratkaisin kissan. Tässä tehtävässä ratkaistiin helppoja kysymyksiä. Lopussa täytyi löytää Root flag ja antaa sen vastaus. 
+Ratkaisin kissan. Tässä tehtävässä ratkaistiin helppoja kysymyksiä. Lopussa täytyi löytää Root flag ja antaa sen vastaus. 
 
 ![image](https://github.com/user-attachments/assets/a3920927-112d-44a4-a7a2-83a40f68d23f)
 
+Olisin ratkaissut toisenkin, sillä tämä oli kivaa ja helppoa, mutta valiettavasti aika on rajallista tällä viikolla.
 
 # Lähteet
 Karvinen, T. 2024. Tunkeutumistestaus - Penetration Testing course - 2024 late autumn. Saatavilla: https://terokarvinen.com/tunkeutumistestaus/
@@ -82,3 +83,6 @@ Karvinen, T. 2024. h3 - Nuuskija. Saatavilla: https://terokarvinen.com/tunkeutum
 HackTricks. 2024. Wireshark tricks. Saatavilla: https://book.hacktricks.xyz/generic-methodologies-and-resources/basic-forensic-methodology/pcap-inspection/wireshark-tricks#improve-your-wireshark-skills
 
 Karvinen, T. 2023. Find Hidden Web Directories - Fuzz URLs with ffuf. Saatavilla: https://terokarvinen.com/2023/fuzz-urls-find-hidden-directories/
+
+
+Hack The Box. 2024. Starting Point. Saatavilla: https://app.hackthebox.com/starting-point
