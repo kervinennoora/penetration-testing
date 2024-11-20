@@ -131,9 +131,9 @@ Viimeisenä Pipes, sen täytyisi löytää *redhat* mutta tältä näyttää saa
 
 Löysin Githubista salatun PDF-tiedoston ja aion murtaa sen. Ladataan encrypted.pdf ja tallennetaan se työpöydälle. 
 
-![image](https://github.com/user-attachments/assets/c7456341-0486-4d4e-a86c-f75b5b1f276d)!
+![image](https://github.com/user-attachments/assets/c7456341-0486-4d4e-a86c-f75b5b1f276d)
 
-[image](https://github.com/user-attachments/assets/7f4ab132-69b1-4bc6-8173-3ab72aaf6ebe)
+![image](https://github.com/user-attachments/assets/7f4ab132-69b1-4bc6-8173-3ab72aaf6ebe)
 
 Käytetään John2Pdf hyökkäystä Hash-tiedoston tekoon. Käytetään komentoa ``sudo /usr/bin/pdf2john /home/kali/Desktop/encrypted.pdf > encrypted.pdf.hash``. 
 
