@@ -70,6 +70,63 @@ Kokeilin myös, jos kyseessä olisi väärä hakemisto. Vastaan tuli lisää ong
 Pyörittelin tätä tehtävää tovin verran ja nypin hiuksia päästäni, mutten keksinyt ratkaisua ongelmaan. Valitettavasti tämä osa tehtävää jää nyt kesken. Ohjeen mukaan salasanan pitäisi olla butterfly. 
 
 ## c) Fuffme
+
+Asennetaan Fuff Karvisen ohjeiden mukaisesti. 
+
+![image](https://github.com/user-attachments/assets/c412a70b-6fc7-43b0-9184-ba96db216fc0)
+
+Asennetaan ohjeessa mainitut Wordlistat.
+
+![image](https://github.com/user-attachments/assets/a390f8bb-f24e-44e2-93df-6b7586393deb)
+
+Tämän jälkeen irrotetaan kone verkosta ja lähdetään hommiin. Testataan ensin yhteys.
+
+![image](https://github.com/user-attachments/assets/26fbeee3-f492-4bdf-b436-a041832200e3)
+
+Testataan kommennolla `` ffuf -w $HOME/wordlists/common.txt -u http://ffuf.me/cd/basic/FUZZ``.
+
+![image](https://github.com/user-attachments/assets/01fae29d-a557-448f-a23e-468127acc6b7)
+
+Kone löytää *development.log* ja *class*. 
+
+Seuraavaksi kokeilin ``ffuf -w ~/wordlists/parameters.txt -u http://localhost/cd/basic/FUZZ``
+
+![image](https://github.com/user-attachments/assets/3f7ddda5-828e-4e64-9299-ff9a07705620)
+
+Tällä kertaa löytyi ainoastaan *class*. 
+
+Kohta Subdomains, sieltäkin löytyi *class*. 
+
+![image](https://github.com/user-attachments/assets/3e725487-4162-489d-8635-62610ed1dda7)
+
+Tässä kohta No 404 Status ja  murto-osa sen löydöistä.
+
+![image](https://github.com/user-attachments/assets/b8d4484d-c8d1-42dd-9599-0ce3f155745f)
+
+Sama aihe mutta komennolla ``ffuf -w ~/wordlists/common.txt -u http://localhost/cd/no404/FUZZ -fs 669``. Vastaukseksi tuli *secret*. 
+
+![image](https://github.com/user-attachments/assets/c2ceef0d-411e-40d3-9eff-1ca938a09dfd)
+
+Seuraavana recursion, joka löysi *admin* ja *users*.
+
+![image](https://github.com/user-attachments/assets/b6bfb8dd-2162-4ca1-b615-5be8c0d04186)
+
+Nyt vuorossa File Extensions. Sieltä löytyi *users.log*.
+
+![image](https://github.com/user-attachments/assets/ffd7b1ac-3097-4050-9739-6538586ee0cd)
+
+Param Mining löysi *debug*
+
+![image](https://github.com/user-attachments/assets/c5e1a0cf-167b-4238-ad41-c4850189ccb8)
+
+Yritin kohtaa Rate Limited 5 kertaa, mutta sain joka kerralla error viestiä. 
+
+![image](https://github.com/user-attachments/assets/2cd9d3a0-d0ed-4fd2-a36c-a3b1249c6471)
+
+Viimeisenä Pipes, sen täytyisi löytää *redhat* mutta tältä näyttää saamani vastaus.
+
+![image](https://github.com/user-attachments/assets/e9bcb793-3999-4df2-abde-5f67d65af927)
+
 # Lähteet
 Karvinen, T. 2024. Tunkeutumistestaus - Penetration Testing course - 2024 late autumn. Saatavilla: https://terokarvinen.com/tunkeutumistestaus/
 
