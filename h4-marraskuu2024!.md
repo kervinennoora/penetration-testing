@@ -28,6 +28,27 @@
 - Käytettäviä komentoja esimerkiksi:
     - ``msfvenom -p <PAYLOAD> -e <ENCODER> -f <FORMAT> -i <ENCODE COUNT> LHOST=<IP>``
     - ``msfvenom -p linux/x86/meterpreter/bind_tcp RHOST=(IP Address) LPORT=(Your Port) -f elf > bind.elf``
+ 
+## a)  Asenna Hashcat ja testaa sen toiminta murtamalla esimerkkisalasana
+
+Ennen tämän viikon kotitehtäviä poistin Kali virtuaalikoneen omalta koneeltani ja asensin uudelleen. Kone käyttäytyy nyt huomattavasti paremmin ja uskon sen vaikuttavan positiivisesti tämän viikon tehtävien tekoon.
+
+Aloitetaas tehtävä asentamalla Hashcat Karvisen ohjeiden mukaisesti.
+
+![image](https://github.com/user-attachments/assets/fc56d550-4a67-40f1-8a75-d554b56ce2de)
+
+Luodaan uusi hakemisto *hashed* ja ladataan sinne sanakirja hakemisto *Rockyou*.
+
+![image](https://github.com/user-attachments/assets/ea4e68dd-6732-4d7b-a5a5-e0028f38957d)
+
+Käytetään komentoa ``hashcat -m 0 '6b1628b016dff46e6fa35684be6acc96' rockyou.txt -o solved`` ja murretaan Hash. 
+
+![image](https://github.com/user-attachments/assets/66a335d1-0379-458d-9509-ef0971d3712b)
+
+Saatiin haluttu lopputulos eli salasana on summer.
+
+![image](https://github.com/user-attachments/assets/7d0cf121-5fe4-4f50-ac64-7c05bdaebcf8)
+
 
 # Lähteet
 Karvinen, T. 2024. Tunkeutumistestaus - Penetration Testing course - 2024 late autumn. Saatavilla: https://terokarvinen.com/tunkeutumistestaus/
