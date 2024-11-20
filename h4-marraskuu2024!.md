@@ -59,7 +59,17 @@ Ladataan esimerkki ZIP-tiedosto.
 
 ![image](https://github.com/user-attachments/assets/530c3933-4d1e-46bc-b53b-76a3a9b2cfec)
 
+Aloitin esimerkkitiedoston murtamisen mutta vastaan tuli outo ongelma.
 
+![image](https://github.com/user-attachments/assets/5eb52371-e774-4950-9061-fc16398fea6a)
+
+Kokeilin myös, jos kyseessä olisi väärä hakemisto. Vastaan tuli lisää ongelmia.
+
+![image](https://github.com/user-attachments/assets/bcd7a19b-6343-4460-98dd-bbec62e5eed0)
+
+Pyörittelin tätä tehtävää tovin verran ja nypin hiuksia päästäni, mutten keksinyt ratkaisua ongelmaan. Valitettavasti tämä osa tehtävää jää nyt kesken. Ohjeen mukaan salasanan pitäisi olla butterfly. 
+
+## c) Fuffme
 # Lähteet
 Karvinen, T. 2024. Tunkeutumistestaus - Penetration Testing course - 2024 late autumn. Saatavilla: https://terokarvinen.com/tunkeutumistestaus/
 
