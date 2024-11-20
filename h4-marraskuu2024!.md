@@ -49,6 +49,16 @@ Saatiin haluttu lopputulos eli salasana on summer.
 
 ![image](https://github.com/user-attachments/assets/7d0cf121-5fe4-4f50-ac64-7c05bdaebcf8)
 
+## b) Asenna John the Ripper ja testaa sen toiminta murtamalla jonkin esimerkkitiedoston salasana.
+
+Aloitetaan asentamalla John the Ripper ohjeiden mukaisesti.
+
+![image](https://github.com/user-attachments/assets/58e1a5d4-0bc1-4bff-b714-f0fdf76de879)
+
+Ladataan esimerkki ZIP-tiedosto.
+
+![image](https://github.com/user-attachments/assets/530c3933-4d1e-46bc-b53b-76a3a9b2cfec)
+
 
 # Lähteet
 Karvinen, T. 2024. Tunkeutumistestaus - Penetration Testing course - 2024 late autumn. Saatavilla: https://terokarvinen.com/tunkeutumistestaus/
