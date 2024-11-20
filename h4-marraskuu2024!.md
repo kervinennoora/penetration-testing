@@ -115,7 +115,7 @@ Nyt vuorossa File Extensions. Sieltä löytyi *users.log*.
 
 ![image](https://github.com/user-attachments/assets/ffd7b1ac-3097-4050-9739-6538586ee0cd)
 
-Param Mining löysi *debug*
+Param Mining löysi *debug*.
 
 ![image](https://github.com/user-attachments/assets/c5e1a0cf-167b-4238-ad41-c4850189ccb8)
 
@@ -129,7 +129,15 @@ Viimeisenä Pipes, sen täytyisi löytää *redhat* mutta tältä näyttää saa
 
 ## d) Tiedosto
 
-palaa tähän myöhemmin.
+Löysin Githubista salatun PDF-tiedoston ja aion murtaa sen. Ladataan encrypted.pdf ja tallennetaan se työpöydälle. 
+
+![image](https://github.com/user-attachments/assets/c7456341-0486-4d4e-a86c-f75b5b1f276d)!
+
+[image](https://github.com/user-attachments/assets/7f4ab132-69b1-4bc6-8173-3ab72aaf6ebe)
+
+Käytetään John2Pdf hyökkäystä Hash-tiedoston tekoon. Käytetään komentoa ``sudo /usr/bin/pdf2john /home/kali/Desktop/encrypted.pdf > encrypted.pdf.hash``. 
+
+![image](https://github.com/user-attachments/assets/436d90a7-8021-4c94-a45b-31f763080c43)
 
 ## e) Tiiviste
 Menen tässä kohtaa tehtävän ehdotuksella eli luon käyttäjän ja murran sen salasanan. Lähteissä video, jota käytin apuna tehtävässä.  Luodaan käyttäjä kuje ja annetaan sen salasanaksi kuje. Kommennot  `` sudo useradd kuje`` ja ``sudo passwd kuje``.
