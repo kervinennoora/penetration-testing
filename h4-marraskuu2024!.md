@@ -139,6 +139,21 @@ Käytetään John2Pdf hyökkäystä Hash-tiedoston tekoon. Käytetään komentoa
 
 ![image](https://github.com/user-attachments/assets/436d90a7-8021-4c94-a45b-31f763080c43)
 
+Hash-teidosto näyttää tältä ja nyt se pitäisi murtaa Hashcatin avulla. 
+
+![image](https://github.com/user-attachments/assets/3ae18b24-7fc3-4468-8e3d-1cb2520fdb50)
+
+Tässä kohtaa otin avuksi Youtuben ja sieltä löytämäni videon, joka löytyy lähteistä.
+
+Poistetaan sotku Hash-tiedoston alustta, että voimme murtaa sen. 
+
+![image](https://github.com/user-attachments/assets/934bd7d0-a0d2-4eac-9ab7-e289cc3ebd11)
+
+Tämä Hash käyttää moodia 10500. Käytetään videossa mainittua komentoa ``hashcat -m 10500 encrypted.pdf.hash /usr/share/wordlists/rockyou.txt.gz ``. 
+
+![image](https://github.com/user-attachments/assets/bd589fba-bd23-40c6-924b-386c433d81b2)
+
+Sain vastaukseksi, että Status bon Exhausted. 
 ## e) Tiiviste
 Menen tässä kohtaa tehtävän ehdotuksella eli luon käyttäjän ja murran sen salasanan. Lähteissä video, jota käytin apuna tehtävässä.  Luodaan käyttäjä kuje ja annetaan sen salasanaksi kuje. Kommennot  `` sudo useradd kuje`` ja ``sudo passwd kuje``.
 
@@ -215,6 +230,8 @@ Santos, O. 2017. Security Penetration Testing The Art of Hacking Series LiveLess
 HackTricks. 2024. MSFVenom - CheatSheet. Saatavilla:  https://book.hacktricks.xyz/generic-methodologies-and-resources/reverse-shells/msfvenom
 
 Karvinen, T. 2023. Fuffme - Install Web Fuzzing Target on Debian. Saatavilla: https://terokarvinen.com/2023/fuffme-web-fuzzing-target-debian/
+
+ByteStryke. 2023. Crack a PDF with Hashcat - Youtube. Saatavilla: https://www.youtube.com/watch?v=u8hA-DxWMNk
 
 G MAN : Security. 2024. CRACK the Password | JOHN the Ripper Password Cracking ( 5 minutes). Saatavilla: https://www.youtube.com/watch?v=5MLprTAxYDA&t=10s
 
