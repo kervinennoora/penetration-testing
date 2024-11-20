@@ -49,7 +49,7 @@ Saatiin haluttu lopputulos eli salasana on summer.
 
 ![image](https://github.com/user-attachments/assets/7d0cf121-5fe4-4f50-ac64-7c05bdaebcf8)
 
-## b) Asenna John the Ripper ja testaa sen toiminta murtamalla jonkin esimerkkitiedoston salasana.
+## b) Asenna John the Ripper ja testaa sen toiminta murtamalla jonkin esimerkkitiedoston salasana
 
 Aloitetaan asentamalla John the Ripper ohjeiden mukaisesti.
 
@@ -127,6 +127,37 @@ Viimeisenä Pipes, sen täytyisi löytää *redhat* mutta tältä näyttää saa
 
 ![image](https://github.com/user-attachments/assets/e9bcb793-3999-4df2-abde-5f67d65af927)
 
+## d) Tiedosto
+
+palaa tähän myöhemmin.
+
+## e) Tiiviste
+Menen tässä kohtaa tehtävän ehdotuksella eli luon käyttäjän ja murran sen salasanan. Lähteissä video, jota käytin apuna tehtävässä.  Luodaan käyttäjä kuje ja annetaan sen salasanaksi kuje. Kommennot  `` sudo useradd kuje`` ja ``sudo passwd kuje``.
+
+![image](https://github.com/user-attachments/assets/e6c5c3c5-aa2f-4b0f-a349-ea56a9ed2c76)
+
+Kujen tiiviste pitäisi löytyä kansiosta ``/etc/shadow``
+
+![image](https://github.com/user-attachments/assets/5d3c4bf5-40be-4c35-a96a-e0b50b3df672)
+
+Loput tiedot löytyvät kansiosta ``/etc/passwd``. 
+
+![image](https://github.com/user-attachments/assets/e53e0248-1036-4b02-8fb7-8056e9ea8599)
+
+Kopioidaan shadow tiedoston tiiviste työpöydälle uuteen kansioon nimeltä *shadow*. Tehdään sama myös kansiolle passwd. Lopuksi luodaan kolmas tiedosto *unshadow* ja kopioidaan sinne molemmat tiedot.
+
+![image](https://github.com/user-attachments/assets/50808c65-be49-4580-84df-088a73f819b2)
+
+Luodaan myös sanalista *sanalista.txt*, jossa on salasanoja, joita John the Ripper testailee.
+
+![image](https://github.com/user-attachments/assets/80cef5cb-7d9a-4d3f-a297-d2dcc855d039)
+
+Lopuksi ajoin komennon ``sudo john --wordlist=/usr/share/wordlists/sanalista.txt --format=crypt unshadow`` ja tämä oli vastaus. Jokin meni mönkään mutta revin jo tarpeeksi hiuksiani tämän tehtävän parissa. 
+
+![image](https://github.com/user-attachments/assets/4a5a33e7-90ca-49cb-a365-ae8a9c0352a9)
+
+
+## f) Tee msfvenom-työkalulla haittaohjelma, joka soittaa kotiin
 # Lähteet
 Karvinen, T. 2024. Tunkeutumistestaus - Penetration Testing course - 2024 late autumn. Saatavilla: https://terokarvinen.com/tunkeutumistestaus/
 
@@ -139,3 +170,7 @@ Karvinen, T. 2023. Crack File Password With John. Saatavilla:  https://terokarvi
 Santos, O. 2017. Security Penetration Testing The Art of Hacking Series LiveLessons. O'Reilly. Saatavilla: https://www.oreilly.com/videos/security-penetration-testing/9780134833989/9780134833989-sptt_00_06_00_00/
 
 HackTricks. 2024. MSFVenom - CheatSheet. Saatavilla:  https://book.hacktricks.xyz/generic-methodologies-and-resources/reverse-shells/msfvenom
+
+Karvinen, T. 2023. Fuffme - Install Web Fuzzing Target on Debian. Saatavilla: https://terokarvinen.com/2023/fuffme-web-fuzzing-target-debian/
+
+G MAN : Security. 2024. CRACK the Password | JOHN the Ripper Password Cracking ( 5 minutes). Saatavilla: https://www.youtube.com/watch?v=5MLprTAxYDA&t=10s
