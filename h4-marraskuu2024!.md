@@ -153,7 +153,7 @@ Tämä Hash käyttää moodia 10500. Käytetään videossa mainittua komentoa ``
 
 ![image](https://github.com/user-attachments/assets/bd589fba-bd23-40c6-924b-386c433d81b2)
 
-Sain vastaukseksi, että Status bon Exhausted. 
+Sain vastaukseksi, että Status on Exhausted. 
 ## e) Tiiviste
 Menen tässä kohtaa tehtävän ehdotuksella eli luon käyttäjän ja murran sen salasanan. Lähteissä video, jota käytin apuna tehtävässä.  Luodaan käyttäjä kuje ja annetaan sen salasanaksi kuje. Kommennot  `` sudo useradd kuje`` ja ``sudo passwd kuje``.
 
