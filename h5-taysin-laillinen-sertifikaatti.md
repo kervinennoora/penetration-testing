@@ -227,9 +227,17 @@ Ja näin lab saatiin ratkaistua ja *carlos* poistettua.
 
 Tämän tehtävän tehtävänanto oli todella laihaa, joten siirryin suoraan siihen, että käytän apuna mallivastausta. Tehtävän ideana on käyttää hakukenttää hyökkäykseen. Jos hakukenttään kirjoittaa pätkän skriptiä, sivu ajaa sen. Labin sai suoritettua sillä, että kirjoitti hakukenttään *<script>alert(1)</script>*. 
 
-Olen aika hämilläi tehtävästä.
+Olen aika hämilläni tehtävästä.
 
 **j)**
+
+Tässä tehtässä on sama periaate mutta kohteena on kommenttikenttä. Ajattelin, että tehtävä on aika samanlainen, joten kirjoitin kommenttikenttään edellisen tehtävän skriptin.
+
+![image](https://github.com/user-attachments/assets/bd7aa45a-c739-4849-95f2-634062eeac8f)
+
+Ja kappas! Tehtävä ratkesi.
+
+![image](https://github.com/user-attachments/assets/e51e40f1-2957-4e5e-8e73-47d26bdbfbe7)
 
 
 # Lähteet
@@ -267,3 +275,5 @@ Portswigger.net. s. a. Lab: Basic SSRF against the local server | Web Security A
 Portswigger.net. s. a. Lab: Reflected XSS into HTML context with nothing encoded | Web Seurity Academy. Saatavilla: https://portswigger.net/web-security/cross-site-scripting/reflected/lab-html-context-nothing-encoded. 
 
 Portswigger.net. s. a. Lab: Stored XSS into HTML context with nothing encoded | Web Security Academy. Saatavilla: https://portswigger.net/web-security/cross-site-scripting/stored/lab-html-context-nothing-encoded.
+
+Ffuf. s. a. ffuf/pencode: Complex payload encoder. GitHub. Saatavilla: https://github.com/ffuf/pencode. 
