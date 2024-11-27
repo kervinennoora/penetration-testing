@@ -38,6 +38,8 @@
     - Hyökkäykset ovat yksinkertaisia toteuttaa, usein vain URL-parametrin muuttamisella.
     - Se voi johtaa arkaluonteisten tietojen paljastumiseen ja vakaviin oikeuksien väärinkäyttöihin.
 - Korjauksena tulee aina tarkastaa käyttäjän oikeudet suhteessa pyydettyyn resurssiin, ja suositeltavaa on käyttää epäsuoria tunnisteita (kuten tokenien tai satunnaisten tunnisteiden generoimista) suoran pääsyn sijasta.
+
+  
 - Path Traversal -haavoittuvuudet mahdollistavat hyökkääjän lukevan mielivaltaisia tiedostoja sovelluksen käyttävän palvelimen tiedostojärjestelmästä.
 - Tämä sisältää:
     - Sovelluksen koodia ja dataa.
@@ -49,6 +51,37 @@
     - Käytä kahta puolustuskerrosta:
         - Syötteen validointi: Käytä sallittujen arvojen listaa tai varmista, että syöte sisältää vain hyväksyttyjä merkkejä (esim. aakkosnumeerisia).
         - Polun kanonisointi: Tarkista, että tiedoston kanoninen polku alkaa odotetulla peruskansiolla.
+     
+          
+- Server-side template injection tapahtuu, kun hyökkääjä pystyy käyttämään mallipohjan natiivia syntaksia haitallisen hyökkäyksen suorittamiseen palvelimella.
+- SSTI:n vaikutukset
+    - Kriittinen vaara: Hyökkääjä voi saavuttaa etähallinnan palvelimeen, käyttää sitä muihin hyökkäyksiin tai varastaa tietoja.
+    - Tietojen luku: Vaikka täysi hallinta ei ole mahdollinen, hyökkääjä voi silti lukea herkkiä tietoja ja tiedostoja palvelimelta.
+- Ehkäisy:
+    - Vältä suoraa käyttäjän syötteen lisäämistä malliin.
+    - Käytä "logiikkavapaita" mallimoottoreita kuten Mustache, jotka erottavat esityksen ja logiikan toisistaan.
+    - Sandboxaus.
+    - Rajaa käyttäjien oikeuksia.
+- SSTI:n ehkäisy vaatii huolellista suunnittelua, mutta oikein toteutettuna se voi merkittävästi pienentää palvelimeen kohdistuvien hyökkäysten riskiä.
+
+- SSRF on verkkoturvallisuuden haavoittuvuus, jossa hyökkääjä voi saada sovelluksen tekemään HTTP-pyyntöjä ei-toivottuihin kohteisiin.
+- SSRF-hyökkäysten vaikutukset
+    - Antaa hyökkääjälle luvattoman pääsyn tietoihin tai toimintoihin.
+    - Mahdollistaa jatkohyökkäykset muihin sisäisiin järjestelmiin.
+    - Tehdä hyökkäyksistä näyttävän siltä, että ne ovat peräisin kohdeorganisaatiosta.
+- Sokeassa SSRF:ssä sovellus suorittaa pyynnön, mutta hyökkääjä ei saa suoraa vastausta.
+  
+- Cross-site scripting (XSS) on verkkoturvallisuuden haavoittuvuus, jonka avulla hyökkääjä voi vaarantaa käyttäjän vuorovaikutuksen haavoittuvan sovelluksen kanssa.
+- XSS:n avulla hyökkääjä voi:
+    - Esittäytyä uhrikäyttäjänä ja suorittaa tämän oikeuksia vaativia toimintoja.
+    - Päästä käsiksi kaikkiin tietoihin, joihin uhrikäyttäjällä on pääsy.
+    - Jos uhri on sovelluksen ylläpitäjä, hyökkääjä voi saada täydellisen hallinnan sovelluksesta ja sen tiedoista.
+- XSS toimii manipuloimalla verkkosivustoa niin, että se palauttaa haitallista JavaScript-koodia. Kun haittakoodi suoritetaan käyttäjän selaimessa, hyökkääjä voi täysin hallita käyttäjän vuorovaikutusta sovelluksen kanssa.
+- Ehkäisy:
+    - Syötteen suodatus
+    - Tietojen koodaus
+    - HTTP-vastausotsikot
+    - Content Security Policy (CSP)
 # Lähteet
 
 Karvinen, T. 2024. Tunkeutumistestaus - Penetration Testing course - 2024 late autumn. Saatavilla: https://terokarvinen.com/tunkeutumistestaus/.
