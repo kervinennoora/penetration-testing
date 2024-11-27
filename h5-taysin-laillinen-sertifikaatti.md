@@ -118,7 +118,27 @@ Siepataan taas hakupyyntöjä.
 
 ## Portswigger (kohdat c-j)
 
+Kaikki tehtävät ovat mainittuna lähteissä. 
 
+**c)**
+
+Tämä tehtävä käsittelee IDORia. Tehtävässä täytyy löytää salasana käyttäjälle *carlos* ja kirjautua käyttäjälle.
+
+Mennään labissa sivulle *Live chat* ja lähetetään viesti. Tämän jälkeen painetaan "View transcript".
+
+![image](https://github.com/user-attachments/assets/bd8cca30-2e76-43ce-9271-32e6f8229277)
+
+Sillä välin Zap on tallentanut hakupyyntöjä ja sieltä löytyy GET-pyyntö. Pyynnössä määritellään mitä transcriptiä käytetään chatissa. Valitaan Get pyyntö ja siirrytään väilehdelle "Open/Resend with Request editor" Tällä hetkellä se on "2.txt", kokeillaan muuttaa se "1.txt".
+
+![image](https://github.com/user-attachments/assets/2b12c729-de4f-41b8-99c9-89f8020b5df7)
+
+Kun pyyntö on lähetetty. Näkee ZAPin avulla, että chat kaveri on antanut meille tarvittavan salasanan. 
+
+![image](https://github.com/user-attachments/assets/0ca7a034-1744-4c54-abaf-826a76db45e3)
+
+Nyt voimme kirjautua käyttäjälle *carlos*.
+
+![image](https://github.com/user-attachments/assets/095166a2-a819-4867-8918-c1beda9268c3)
 
 # Lähteet
 
@@ -139,3 +159,5 @@ Portswigger.net. s.a. Server-side template injection | Web Security Academy. Saa
 Portswigger.net. s. a. What is SSRF (Server-side request forgery)? Tutorial and examples | Web Security Academy. Saatavilla: https://portswigger.net/web-security/ssrf.
 
 Portswigger.net. s. a. What is cross-site scripting (XSS) and how to prevent it? | Web Security Academy. Saatavilla: https://portswigger.net/web-security/cross-site-scripting. 
+
+Portswigger.net. s. a. Lab: Insecure ogject references | Web Security Academy. Saatavilla: https://portswigger.net/web-security/access-control/lab-insecure-direct-object-references. 
