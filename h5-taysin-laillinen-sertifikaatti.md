@@ -128,7 +128,7 @@ Mennään labissa sivulle *Live chat* ja lähetetään viesti. Tämän jälkeen 
 
 ![image](https://github.com/user-attachments/assets/bd8cca30-2e76-43ce-9271-32e6f8229277)
 
-Sillä välin Zap on tallentanut hakupyyntöjä ja sieltä löytyy GET-pyyntö. Pyynnössä määritellään mitä transcriptiä käytetään chatissa. Valitaan Get pyyntö ja siirrytään väilehdelle "Open/Resend with Request editor" Tällä hetkellä se on "2.txt", kokeillaan muuttaa se "1.txt".
+Sillä välin Zap on tallentanut hakupyyntöjä ja sieltä löytyy GET-pyyntö. Pyynnössä määritellään mitä transcriptiä käytetään chatissa. Valitaan Get pyyntö ja siirrytään väilehdelle "Open/Resend with Request editor" Tällä hetkellä se on "6.txt", kokeillaan muuttaa se "1.txt".
 
 ![image](https://github.com/user-attachments/assets/2b12c729-de4f-41b8-99c9-89f8020b5df7)
 
