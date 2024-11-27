@@ -202,6 +202,28 @@ Tämän vastauksen jälkeen kun tuotekuvausta muokataan uudelleen ja sinne laite
 Tämä oli itselle aika haastava eli analysointi on hiukan hankalampaa. Mutta haitallisen koodin avulla saa selville arkaluontoista tietoa.
 
 **h)**
+Tämän tehtävän ohjeissa kerrotaan, että apuna käytetään varastosaldoa. Tehtävä on poistaa käyttäjä *carlos*
+
+Kun labissa tarkastaa saldoa se tallentuu GET-pyyntönä ZAPiin. Muokkaamalla tätä pyyntöä pääsee sisälle. Ohjeissa kerrotaan, että se tapahtuu stockApin avulla. Vaidetaan request editorissa sen URLiksi *hhtp://localhost/admin*.
+
+![image](https://github.com/user-attachments/assets/85701de4-8c9a-4328-8b4f-9089ae09f76d)
+
+Vastaukseksi saadaan pätkä HTML-koodia. 
+
+![image](https://github.com/user-attachments/assets/be43e895-0fb5-42ae-8060-d5d4031911a5)
+
+HTML-koodista löytyy kohta kuinka poistaa käyttäjä. Kopioidaan se URLiin ja kokeillaan, poistuuko käyttäjä. 
+
+![image](https://github.com/user-attachments/assets/28368ff1-8caa-4730-a641-d18aabe17560)
+
+![image](https://github.com/user-attachments/assets/fca62c0a-c4b1-40ce-aea4-791936e6eb2e)
+
+Ja näin lab saatiin ratkaistua ja *carlos* poistettua.
+
+![image](https://github.com/user-attachments/assets/b937a71b-df21-43c0-bfc3-eb32f2986c5b)
+
+
+**i)**
 
 # Lähteet
 
@@ -232,3 +254,7 @@ Portswigger.net. s. a. Lab: File path traversal, traversal sequences blocked wit
 Portswigger.net. s. a. Lab: File path traversal, traversal sequences stripped non-recursively | Web Security Academy. Saatavilla: https://portswigger.net/web-security/file-path-traversal/lab-sequences-stripped-non-recursively. 
 
 Portswigger.net. a. s. Lab: Server-side template injection with information disclosure via user-supplied objects | Web Security Academy. Saatavilla: https://portswigger.net/web-security/server-side-template-injection/exploiting/lab-server-side-template-injection-with-information-disclosure-via-user-supplied-objects. 
+
+Portswigger.net. s. a. Lab: Basic SSRF against the local server | Web Security Academy. Saatavilla: https://portswigger.net/web-security/ssrf/lab-basic-ssrf-against-localhost. 
+
+Portswigger.net. s. a. Lab: Reflected XSS into HTML context with nothing encoded | Web Seurity Academy. Saatavilla: https://portswigger.net/web-security/cross-site-scripting/reflected/lab-html-context-nothing-encoded. 
