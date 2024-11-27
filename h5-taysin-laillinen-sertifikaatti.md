@@ -225,6 +225,13 @@ Ja näin lab saatiin ratkaistua ja *carlos* poistettua.
 
 **i)**
 
+Tämän tehtävän tehtävänanto oli todella laihaa, joten siirryin suoraan siihen, että käytän apuna mallivastausta. Tehtävän ideana on käyttää hakukenttää hyökkäykseen. Jos hakukenttään kirjoittaa pätkän skriptiä, sivu ajaa sen. Labin sai suoritettua sillä, että kirjoitti hakukenttään *<script>alert(1)</script>*. 
+
+Olen aika hämilläi tehtävästä.
+
+**j)**
+
+
 # Lähteet
 
 Karvinen, T. 2024. Tunkeutumistestaus - Penetration Testing course - 2024 late autumn. Saatavilla: https://terokarvinen.com/tunkeutumistestaus/.
@@ -258,3 +265,5 @@ Portswigger.net. a. s. Lab: Server-side template injection with information disc
 Portswigger.net. s. a. Lab: Basic SSRF against the local server | Web Security Academy. Saatavilla: https://portswigger.net/web-security/ssrf/lab-basic-ssrf-against-localhost. 
 
 Portswigger.net. s. a. Lab: Reflected XSS into HTML context with nothing encoded | Web Seurity Academy. Saatavilla: https://portswigger.net/web-security/cross-site-scripting/reflected/lab-html-context-nothing-encoded. 
+
+Portswigger.net. s. a. Lab: Stored XSS into HTML context with nothing encoded | Web Security Academy. Saatavilla: https://portswigger.net/web-security/cross-site-scripting/stored/lab-html-context-nothing-encoded.
