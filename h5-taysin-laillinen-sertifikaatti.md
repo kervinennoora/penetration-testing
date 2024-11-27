@@ -82,6 +82,44 @@
     - Tietojen koodaus
     - HTTP-vastausotsikot
     - Content Security Policy (CSP)
+## a) Totally Legit Sertificate
+
+Asensin OWASP ZAP sovelluksen virtuaalikoneelle viime tunnilla, josta johtuen sitä ei demota tässä raporissa. Siirryn siis suoraan CA-sertifikaatin luontiin.
+
+Avataan OWASP ZAP ja mennään välisivulle Tools ja valitaan sieltä Options. Valitaan sieltä kohta Network, jonka alta löytyy Sever Cerificates.
+
+![image](https://github.com/user-attachments/assets/266e3c8c-0de7-4c6f-ab45-8997c7571019)
+
+Tallennetaan se ja siirrytään FireFoxin puolelle. Mennään asetuksiin ja haetaan certificates. Lisätään juuri tallentamamme Sertifikaatti FireFoxiin.
+
+![image](https://github.com/user-attachments/assets/4bb04e5f-a493-4905-8c39-4ce818f0baa2)
+
+Seuraavaksi muutetaan ZAPin asetuksia niin, että se kaappaa myös sivustojen kuvat. Palataan Options välisivulle ja tällä kertaa mennään kohtaan Display. Laitetaan ruksi kohtaan "Process images in HTTP requests/responses" ja tallenetaan muutos.
+
+![image](https://github.com/user-attachments/assets/f309c916-fe80-4c21-99d0-3dc1fa8fa5f9)
+
+Tämän jälkeen on aika siepata hakupyyntöjä.
+
+![image](https://github.com/user-attachments/assets/f27afd6f-479d-45e0-926f-a2130cf10d69)
+
+## b) Kettumaista
+
+Asensin FoxyProxyn jo tunnilla, mutta asennuksen jälkeen sen pitäisi näyttää täältä.
+
+![image](https://github.com/user-attachments/assets/c796adfd-194f-4125-b0f9-9c0b61eaeee1)
+
+Luodaan uusi ZAP-proxy. Kuvassa näkyy kaikki proxyn tiedot, myös pattern joka sille on annettu koskien PortSwigger Labsia.
+
+![image](https://github.com/user-attachments/assets/b4157ad9-c023-4f4b-bf52-1a05781f1d46)
+
+Siepataan taas hakupyyntöjä.
+
+![image](https://github.com/user-attachments/assets/782c73e9-f0ca-4bda-95ea-838be330f67c)
+
+## Portswigger (kohdat c-j)
+
+
+
 # Lähteet
 
 Karvinen, T. 2024. Tunkeutumistestaus - Penetration Testing course - 2024 late autumn. Saatavilla: https://terokarvinen.com/tunkeutumistestaus/.
