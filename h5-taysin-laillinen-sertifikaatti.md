@@ -118,7 +118,7 @@ Siepataan taas hakupyyntöjä.
 
 ## Portswigger (kohdat c-j)
 
-Kaikki tehtävät ovat mainittuna lähteissä. 
+Kaikki tämän osan tehtävät ovat mainittuna lähteissä. 
 
 **c)**
 
@@ -165,11 +165,43 @@ Seurataan millaisia pyyntöjä ZAP on hakenut. Avataan GET-pyyntö request edito
 
 ![image](https://github.com/user-attachments/assets/d9913c35-e6db-47c1-9644-64879eb1d104)
 
-Laitetaan kuvan arvoksi tällä kertaa */etc/passwd* ja lähetetään pyyntö. 
+Laitetaan kuvan arvoksi tällä kertaa */etc/passwd* ja lähetetään pyyntö. Tällä kertaa arvoksi annettin tarkka hakemisto, sillä käyttäjä on estänyt hakemistossa liikkumisen. 
 
 ![image](https://github.com/user-attachments/assets/579448d5-53c9-4b90-97ea-33d503c4a410)
 
 Vastauksena saadaan lista salasanoista. 
+
+**f)**
+
+Tässä tehtävässä jatketaan samaa rataa, eli hyödynnämme kuvien haavoittumista. Avataan joku totekuva ja siirrytään ZAPin puolelle muokkaamaan hakupyyntöjä.
+
+![image](https://github.com/user-attachments/assets/3965177c-4d64-4420-a244-63ae43d0abcc)
+
+Request editorissa muokataan kuvan arvoksi *....//....//....//etc/passwd* ja lähetetään hakupyyntö. Tässä kohtaa katsoin vastauksen siitä missä muodossa hakemisto täytyy ilmoittaa, sillä "sequences" ei ole minulle hirveän tuttu juttu. 
+
+![image](https://github.com/user-attachments/assets/c6fd3969-4ea4-457e-9fc7-eef164a0d536)
+
+Lab suoritettu ja vastauksena lista salasanoista.
+
+**g)**
+
+Tässä tehtävässä on ideana ryöstää salaimen avain haitallisen koodin avulla. Ensimmäisenä kirjaudutaan käyttäjälle labissa. 
+
+![image](https://github.com/user-attachments/assets/322efd4f-8467-445f-aa83-cbba8f2e1af2)
+
+Olemme nyt sellaisella käyttäjällä, jolla on oikeus muokata tuotekuvia. Eli sitä hyödynnetään varmasti tässä tehtävässä. Tässä kohtaa olin aika hukassa, joten hyödynsin tehtävän annon mukana tulleita ohjeita/vastauksia. Ilman niitä en tätä olisi ratkaissut. 
+
+Tehtävässä ideana muokata tuotekuvan kuvausta ja saada error-viesti.
+
+![image](https://github.com/user-attachments/assets/da7e9c67-31cd-4443-bd24-d66cf01a544c)
+
+Tämän vastauksen jälkeen kun tuotekuvausta muokataan uudelleen ja sinne laitetaan viesti *{{settings.SECRET_KEY}}*, antaa serveri vastaukseksi salaisen avaimen. 
+
+![image](https://github.com/user-attachments/assets/b204f05b-2ce1-4e60-bcf0-25d83bf59aa7)
+
+Tämä oli itselle aika haastava eli analysointi on hiukan hankalampaa. Mutta haitallisen koodin avulla saa selville arkaluontoista tietoa.
+
+**h)**
 
 # Lähteet
 
@@ -195,4 +227,8 @@ Portswigger.net. s. a. Lab: Insecure ogject references | Web Security Academy. S
 
 Portswigger.net. s. a. Lab: File path traversal, simple case | Web Security Academy. Saatavilla: https://portswigger.net/web-security/file-path-traversal/lab-simple. 
 
-Portswigger.net. s. a. Lab: File path traversal, traversal sequences blocked with absolute path bypass. Saatavilla: https://portswigger.net/web-security/file-path-traversal/lab-absolute-path-bypass. 
+Portswigger.net. s. a. Lab: File path traversal, traversal sequences blocked with absolute path bypass | Web Security Academy.  Saatavilla: https://portswigger.net/web-security/file-path-traversal/lab-absolute-path-bypass. 
+
+Portswigger.net. s. a. Lab: File path traversal, traversal sequences stripped non-recursively | Web Security Academy. Saatavilla: https://portswigger.net/web-security/file-path-traversal/lab-sequences-stripped-non-recursively. 
+
+Portswigger.net. a. s. Lab: Server-side template injection with information disclosure via user-supplied objects | Web Security Academy. Saatavilla: https://portswigger.net/web-security/server-side-template-injection/exploiting/lab-server-side-template-injection-with-information-disclosure-via-user-supplied-objects. 
