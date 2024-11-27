@@ -120,7 +120,7 @@ Siepataan taas hakupyyntöjä.
 
 Kaikki tämän osan tehtävät ovat mainittuna lähteissä. 
 
-**c)**
+**c) Insecure ogject references**
 
 Tämä tehtävä käsittelee IDORia. Tehtävässä täytyy löytää salasana käyttäjälle *carlos* ja kirjautua käyttäjälle.
 
@@ -140,7 +140,7 @@ Nyt voimme kirjautua käyttäjälle *carlos*.
 
 ![image](https://github.com/user-attachments/assets/095166a2-a819-4867-8918-c1beda9268c3)
 
-**d)**
+**d) File path traversal, simple case**
 
 Tässä tehtävässä käytetään hyväksi haavoittuvuuksia sivuston kuvissa. Tarjoitus saada selville */etc/passwd* tiedoston tiedot. 
 
@@ -155,7 +155,7 @@ Kuvat sijaitsevat hakemistoissa. Muuttamalla kuvan hakemistoksi joku arkaluontei
 ![image](https://github.com/user-attachments/assets/2abbba91-8639-4ad4-8e24-0259cf9d6e76)
 
 
-**e)**
+**e) File path traversal, traversal sequences blocked with absolute path bypass**
 
 Tässäkin tehtävässä hyväksikäytetään kuvien haavoittumista. Mennään labiin ja avataan joku tuote auki. 
 
@@ -171,7 +171,7 @@ Laitetaan kuvan arvoksi tällä kertaa */etc/passwd* ja lähetetään pyyntö. T
 
 Vastauksena saadaan lista salasanoista. 
 
-**f)**
+**f) File path traversal, traversal sequences stripped non-recursively**
 
 Tässä tehtävässä jatketaan samaa rataa, eli hyödynnämme kuvien haavoittumista. Avataan joku totekuva ja siirrytään ZAPin puolelle muokkaamaan hakupyyntöjä.
 
@@ -183,7 +183,7 @@ Request editorissa muokataan kuvan arvoksi *....//....//....//etc/passwd* ja lä
 
 Lab suoritettu ja vastauksena lista salasanoista.
 
-**g)**
+**g) Server-side template injection with information disclosure via user-supplied objects**
 
 Tässä tehtävässä on ideana ryöstää salaimen avain haitallisen koodin avulla. Ensimmäisenä kirjaudutaan käyttäjälle labissa. 
 
@@ -201,7 +201,8 @@ Tämän vastauksen jälkeen kun tuotekuvausta muokataan uudelleen ja sinne laite
 
 Tämä oli itselle aika haastava eli analysointi on hiukan hankalampaa. Mutta haitallisen koodin avulla saa selville arkaluontoista tietoa.
 
-**h)**
+**h) Basic SSRF against the local server**
+
 Tämän tehtävän ohjeissa kerrotaan, että apuna käytetään varastosaldoa. Tehtävä on poistaa käyttäjä *carlos*
 
 Kun labissa tarkastaa saldoa se tallentuu GET-pyyntönä ZAPiin. Muokkaamalla tätä pyyntöä pääsee sisälle. Ohjeissa kerrotaan, että se tapahtuu stockApin avulla. Vaidetaan request editorissa sen URLiksi *hhtp://localhost/admin*.
@@ -223,13 +224,13 @@ Ja näin lab saatiin ratkaistua ja *carlos* poistettua.
 ![image](https://github.com/user-attachments/assets/b937a71b-df21-43c0-bfc3-eb32f2986c5b)
 
 
-**i)**
+**i) Reflected XSS into HTML context with nothing encoded**
 
 Tämän tehtävän tehtävänanto oli todella laihaa, joten siirryin suoraan siihen, että käytän apuna mallivastausta. Tehtävän ideana on käyttää hakukenttää hyökkäykseen. Jos hakukenttään kirjoittaa pätkän skriptiä, sivu ajaa sen. Labin sai suoritettua sillä, että kirjoitti hakukenttään *<script>alert(1)</script>*. 
 
 Olen aika hämilläni tehtävästä.
 
-**j)**
+**j) Stored XSS into HTML context with nothing encoded**
 
 Tässä tehtässä on sama periaate mutta kohteena on kommenttikenttä. Ajattelin, että tehtävä on aika samanlainen, joten kirjoitin kommenttikenttään edellisen tehtävän skriptin.
 
@@ -239,6 +240,26 @@ Ja kappas! Tehtävä ratkesi.
 
 ![image](https://github.com/user-attachments/assets/e51e40f1-2957-4e5e-8e73-47d26bdbfbe7)
 
+## k) Asenna pencode 
+
+Ffufin GitHubissa kehotettiin asentamaan pencode GO ennen pencodea, joten tein sen ihan ensimmäisenä komennolla ``sudo apt install gccgo-go``. Tämän jälkeen asennetaan pencode. Käytetään GitHubin komentoa ``go install github.com/ffuf/pencode/cmd/pencode@latest``.
+
+![image](https://github.com/user-attachments/assets/77226a1f-22d9-49c0-aa5d-0ecb34feedf2)
+
+GitHubissa on ohje encodaamiseen. Joten käytetään sitä: ``$ echo 'what%ever'|pencode urlencode b64encode hexencode
+64326868644355794e5756325a58493d``. 
+
+![image](https://github.com/user-attachments/assets/702ff72a-ccbd-4edd-93f6-bccad9cfe361)
+
+Vastauksena tuli tämä:
+
+![image](https://github.com/user-attachments/assets/b05d103f-24fa-40fe-a7c8-1194f6273c6e)
+
+Eli kokeillaan asennusta uudelleen. Ajetaan kometo ``echo 'kissakissa'|pencode hexencode`` uudelleen. 
+
+![image](https://github.com/user-attachments/assets/4e787863-7732-4f53-a763-5fa6060b98b3)
+
+Jauu! Tehtävä onnistui. 
 
 # Lähteet
 
