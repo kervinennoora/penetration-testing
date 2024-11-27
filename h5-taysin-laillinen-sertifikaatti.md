@@ -140,6 +140,37 @@ Nyt voimme kirjautua käyttäjälle *carlos*.
 
 ![image](https://github.com/user-attachments/assets/095166a2-a819-4867-8918-c1beda9268c3)
 
+**d)**
+
+Tässä tehtävässä käytetään hyväksi haavoittuvuuksia sivuston kuvissa. Tarjoitus saada selville */etc/passwd* tiedoston tiedot. 
+
+Avataan lab ja klikataan joku tuotekuva auki. Samalla ZAP tallentaa hakupyyntöjä. 
+
+Avataan GET-pyyntö request editorilla. Valitaan pyyntö, jossa näkyy kuvan arvo ja vaihdetaan siihen *../../../etc/passwd* ja lähetetään pyyntö. Vastauksena ZAP:ssa saadaan vastaus, jossa näkyy salattua tietoa. 
+
+![image](https://github.com/user-attachments/assets/bb48b271-8745-4105-9302-9e5dfb24655b)
+
+Kuvat sijaitsevat hakemistoissa. Muuttamalla kuvan hakemistoksi joku arkaluonteinen paikka, saadaan haavoittuvia tietoja esille. 
+
+![image](https://github.com/user-attachments/assets/2abbba91-8639-4ad4-8e24-0259cf9d6e76)
+
+
+**e)**
+
+Tässäkin tehtävässä hyväksikäytetään kuvien haavoittumista. Mennään labiin ja avataan joku tuote auki. 
+
+![image](https://github.com/user-attachments/assets/7bbcfa76-9cae-47d8-85a8-a524fea9bd6d)
+
+Seurataan millaisia pyyntöjä ZAP on hakenut. Avataan GET-pyyntö request editorissa. Vaihdetaan kuvan arvoa.
+
+![image](https://github.com/user-attachments/assets/d9913c35-e6db-47c1-9644-64879eb1d104)
+
+Laitetaan kuvan arvoksi tällä kertaa */etc/passwd* ja lähetetään pyyntö. 
+
+![image](https://github.com/user-attachments/assets/579448d5-53c9-4b90-97ea-33d503c4a410)
+
+Vastauksena saadaan lista salasanoista. 
+
 # Lähteet
 
 Karvinen, T. 2024. Tunkeutumistestaus - Penetration Testing course - 2024 late autumn. Saatavilla: https://terokarvinen.com/tunkeutumistestaus/.
@@ -161,3 +192,7 @@ Portswigger.net. s. a. What is SSRF (Server-side request forgery)? Tutorial and 
 Portswigger.net. s. a. What is cross-site scripting (XSS) and how to prevent it? | Web Security Academy. Saatavilla: https://portswigger.net/web-security/cross-site-scripting. 
 
 Portswigger.net. s. a. Lab: Insecure ogject references | Web Security Academy. Saatavilla: https://portswigger.net/web-security/access-control/lab-insecure-direct-object-references. 
+
+Portswigger.net. s. a. Lab: File path traversal, simple case | Web Security Academy. Saatavilla: https://portswigger.net/web-security/file-path-traversal/lab-simple. 
+
+Portswigger.net. s. a. Lab: File path traversal, traversal sequences blocked with absolute path bypass. Saatavilla: https://portswigger.net/web-security/file-path-traversal/lab-absolute-path-bypass. 
